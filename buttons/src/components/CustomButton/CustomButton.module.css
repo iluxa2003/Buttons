@@ -4,8 +4,10 @@
   margin: 10px;
   font-weight: 600;
   min-width: 47px;
+  border-radius: 14px;
   border: none;
 }
+
 .button.small {
   padding: 16px;
   border-radius: 50%;
@@ -16,27 +18,49 @@
   filter: brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(24%)
     hue-rotate(353deg) brightness(106%) contrast(106%);
 }
+
 .button.medium {
   padding: 16px 32px;
-  border-radius: 14px;
+
   background-color: #f2f2f7;
 }
 .button.medium .button_icon {
   filter: brightness(0) saturate(100%) invert(0%) sepia(2%) saturate(16%)
     hue-rotate(5deg) brightness(102%) contrast(100%);
 }
+
+.button.large {
+  min-width: 343px;
+  padding: 16px 130px;
+  color: #ffffff;
+  background: linear-gradient(180deg, #00aefa 0%, #0983c5 99.08%);
+}
+.button.large .button_icon {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(24%)
+    hue-rotate(353deg) brightness(106%) contrast(106%);
+}
 .button_icon.left_side {
   position: absolute;
-  top: auto;
+  vertical-align: middle;
+  top: 12px;
   left: 18px;
 }
-
+.button_icon.center {
+  display: content;
+  width: 20px;
+  height: 20px;
+}
+.button_icon.center ~ .button {
+  padding: 8px 130px;
+}
 .button_icon.center ~ .button_text {
   font-weight: 400;
   font-size: 11px;
-  text-align: center;
   letter-spacing: 0.4px;
 }
-.button_icon.none {
+.no_icon {
   display: none;
+}
+.button.large.dark {
+  background: #000000;
 }

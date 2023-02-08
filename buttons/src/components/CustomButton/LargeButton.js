@@ -1,65 +1,48 @@
 import propTypes from "prop-types";
-import styles from "./Button.module.css";
-const CustomButton = ({
-  iconPosition = "none",
+import styles from "./CustomButton.module.css";
+const LargeButton = ({
+  iconPosition = "left",
+  darkTheme = false,
   icon,
-  size = "medium",
   onClick,
-  label,
+  children,
 }) => {
+  let buttonStyle = styles.button_icon;
+  let theme = "";
+  if (darkTheme) {
+    theme = styles.dark;
+  }
+  if (icon === undefined) {
+    buttonStyle = styles.no_icon;
+  }
+
   return (
     <div>
       <button
-        className={styles.button + " ." + styles.size}
-        style={style}
+        className={styles.button + " " + styles.large + " " + theme}
         onClick={onClick}
       >
         <img
           className={
-            styles.button_icon +
+            buttonStyle +
             " " +
-            (iconPosition === "left" ? styles.left_side : "") +
-            (iconPosition === "center" ? styles.center : "") +
-            (iconPosition === "none" ? styles.none : "")
+            (iconPosition === "center" ? styles.center : styles.left_side)
           }
           src={icon}
+          alt="..."
         />
-        <div className={styles.button_text}>{label}</div>
+        <div className={styles.button_text}>{children}</div>
       </button>
     </div>
   );
 };
 
-const Button = ({
-  label,
-  onClick,
-  backgroundColor = "black",
-  color = "white",
-  borderRadius = "14px",
-  border = "0",
-  size = "medium",
-  margin = "5px",
-  iconType = "none",
-  icon,
-}) => {
-  let padding = "16px";
-  if (size === "small") {
-    padding = "16px";
-  }
-  if (size === "medium") {
-    padding = "16px 32px";
-  }
-  if (size === "large") {
-    padding = "16px 130px";
-  }
-  const style = {
-    background: backgroundColor,
-    borderRadius,
-    border,
-    padding,
-    color,
-    margin,
-  };
+LargeButton.propTypes = {
+  icon: propTypes.string,
+  onClick: propTypes.func,
+  label: propTypes.string,
+  darkTheme: propTypes.bool,
+  iconPosition: propTypes.oneOf(["left", "center"]),
 };
 
-export default CustomButton;
+export default LargeButton;
