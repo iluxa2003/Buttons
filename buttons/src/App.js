@@ -8,6 +8,7 @@ import CustomChecker from "./components/CustomChecker/CustomChecker";
 import CustomSearch from "./components/CustomSearch/CustomSearch";
 import SegmentPicker from "./components/SegmentPicker/SegmentPicker";
 import { useState } from "react";
+import CustomRange from "./components/CustomRange.js/CustomRange";
 
 function App() {
   const [segmentState, setSegmentState] = useState("");
@@ -15,22 +16,18 @@ function App() {
     {
       text: "item1",
       value: "first item",
-      // checked: true,
     },
     {
       text: "item2",
       value: "second item",
-      checked: false,
     },
     {
       text: "item3",
       value: "third item",
-      checked: false,
     },
     {
       text: "item4",
       value: "fourth item",
-      checked: false,
     },
   ];
   return (
@@ -65,6 +62,11 @@ function App() {
           }}
         />
         <div>{segmentState}</div>
+      </div>
+      <div>
+        <CustomRange />
+        <CustomRange currentValue={true} />
+        <CustomRange showRange={true} />
       </div>
     </div>
   );

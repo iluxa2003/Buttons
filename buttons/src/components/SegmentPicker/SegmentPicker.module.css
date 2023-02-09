@@ -13,7 +13,7 @@
   font-family: sans-serif, Arial;
   font-size: 16px;
   border-radius: 4px;
-  padding: 8px 65px;
+  padding: 8px 63px;
 }
 .segment_picker input[type="radio"] {
   display: none;
