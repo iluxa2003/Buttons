@@ -1,8 +1,7 @@
+@import "../../styleVariables.scss";
+
 .search {
   width: 113px;
-  border: 0;
-  background: #f2f2f7;
-  border-radius: 8px;
   padding: 11px 103px 11px 127px;
 
   font-family: "Roboto";
@@ -11,6 +10,11 @@
   font-size: 16px;
   line-height: 140%;
   letter-spacing: 0.15px;
+
+  background: ($lightGreyColor);
+  border: 0;
+  border-radius: 8px;
+
   margin: 10px;
 
   &_wrap {
@@ -18,11 +22,13 @@
   }
 
   &_sign {
-    width: 16px;
-    height: 16px;
     position: absolute;
     top: 24px;
     left: 113px;
+
+    width: 16px;
+    height: 16px;
+
     filter: brightness(0) saturate(100%) invert(87%) sepia(31%) saturate(26%)
       hue-rotate(315deg) brightness(87%) contrast(91%);
   }
@@ -33,14 +39,14 @@
     outline: none;
 
     &::placeholder {
-      color: #000000;
+      color: ($blackColor);
     }
 
     & ~ .search_sign {
-      filter: brightness(0) saturate(100%) invert(0%) sepia(2%) saturate(16%)
-        hue-rotate(5deg) brightness(102%) contrast(100%);
       position: absolute;
       left: 28px;
+      filter: brightness(0) saturate(100%) invert(0%) sepia(2%) saturate(16%)
+        hue-rotate(5deg) brightness(102%) contrast(100%);
     }
 
     & ~ .close_button {
@@ -50,13 +56,13 @@
 }
 
 .close_button {
+  position: absolute;
+  top: 22px;
+  right: 22px;
   display: none;
   padding: 0;
   border: 0;
-  position: absolute;
   cursor: pointer;
-  top: 22px;
-  right: 22px;
 
   & img {
     vertical-align: middle;

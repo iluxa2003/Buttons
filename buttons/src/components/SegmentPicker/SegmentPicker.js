@@ -6,7 +6,9 @@ const SegmentPicker = ({ list, onChange, name }) => {
   const [segmentPickerState, setSegmentPickerState] = useState("");
   const segmentPickerHandler = (event) => {
     setSegmentPickerState(event.target.value);
-    onChange(event);
+    try {
+      onChange(event);
+    } catch {}
   };
   return (
     <div className={styles.segment_picker} onChange={segmentPickerHandler}>

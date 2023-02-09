@@ -12,7 +12,9 @@ const CustomRange = ({
   const [range, setRange] = useState(0);
   const customRangeHandler = (event) => {
     setRange(event.target.value);
-    onInput();
+    try {
+      onInput();
+    } catch {}
   };
   return (
     <div className={styles.range_wrap}>
