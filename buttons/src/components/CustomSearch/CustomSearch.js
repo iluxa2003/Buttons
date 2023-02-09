@@ -2,17 +2,13 @@ import propTypes from "prop-types";
 import styles from "./CustomSearch.module.css";
 import close_button from "../../icons/x-circle.svg";
 import searchSign from "../../icons/search.svg";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 const CustomSearch = ({
   placeholder = "Search products",
   leftSvg = searchSign,
-  state = "unfocused",
   onInput,
 }) => {
   const [focus, setfocus] = useState(false);
-  useEffect(() => {
-    setfocus(state === "focused" ? true : false);
-  }, [state]);
   return (
     <div className={styles.search_wrap}>
       <input
@@ -44,7 +40,7 @@ const CustomSearch = ({
 };
 CustomSearch.propTypes = {
   placeholder: propTypes.string,
-  leftSvg: propTypes.object,
+  leftSvg: propTypes.string,
   onInput: propTypes.func,
   state: propTypes.oneOf(["unfocused", "focused"]),
 };

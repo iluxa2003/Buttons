@@ -1,5 +1,4 @@
 .search_wrap {
-  display: inline;
   position: relative;
 }
 
@@ -22,7 +21,7 @@
   width: 16px;
   height: 16px;
   position: absolute;
-  top: 2px;
+  top: 24px;
   left: 113px;
   filter: brightness(0) saturate(100%) invert(87%) sepia(31%) saturate(26%)
     hue-rotate(315deg) brightness(87%) contrast(91%);
@@ -49,7 +48,7 @@
   border: 0;
   position: absolute;
   cursor: pointer;
-  top: -1px;
+  top: 22px;
   right: 22px;
 }
 .close_button img {
