@@ -1,5 +1,5 @@
 import propTypes from "prop-types";
-import styles from "./CustomButton.module.css";
+import styles from "./CustomButton.module.scss";
 const NoTextButton = ({ icon, onClick, size = "medium" }) => {
   let buttonSize = styles.small;
   if (size === "medium") {

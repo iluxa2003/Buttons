@@ -1,4 +1,4 @@
-import styles from "./SegmentPicker.module.css";
+import styles from "./SegmentPicker.module.scss";
 import SigmentPickerItem from "./SegmentPickerItem";
 import propTypes from "prop-types";
 import { useState } from "react";

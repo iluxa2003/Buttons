@@ -1,4 +1,4 @@
-import styles from "./CustomChecker.module.css";
+import styles from "./CustomChecker.module.scss";
 import propTypes from "prop-types";
 const CustomChecker = ({ disabled = false, onChange }) => {
   return (

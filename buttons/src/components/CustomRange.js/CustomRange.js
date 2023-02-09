@@ -1,6 +1,6 @@
 import { useState } from "react";
 import propTypes from "prop-types";
-import styles from "./CustomRange.module.css";
+import styles from "./CustomRange.module.scss";
 const CustomRange = ({
   min = 0,
   max = 100,
@@ -46,6 +46,7 @@ const CustomRange = ({
     </div>
   );
 };
+
 CustomRange.propTypes = {
   min: propTypes.number,
   max: propTypes.number,

@@ -1,5 +1,5 @@
 import propTypes from "prop-types";
-import styles from "./CustomSearch.module.css";
+import styles from "./CustomSearch.module.scss";
 import close_button from "../../icons/x-circle.svg";
 import searchSign from "../../icons/search.svg";
 import { useState } from "react";

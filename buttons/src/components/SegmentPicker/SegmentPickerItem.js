@@ -1,5 +1,5 @@
 import propTypes from "prop-types";
-import styles from "./SegmentPicker.module.css";
+import styles from "./SegmentPicker.module.scss";
 const SigmentPickerItem = ({ name, value, checked = false, children }) => {
   const id = Math.random();
 

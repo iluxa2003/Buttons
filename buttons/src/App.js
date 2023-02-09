@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import LargeButton from "./components/CustomButton/LargeButton";
 import NoTextButton from "./components/CustomButton/NoTextButton";
 import plus from "./icons/plus.svg";
@@ -64,9 +64,9 @@ function App() {
         <div>{segmentState}</div>
       </div>
       <div>
+        <CustomRange showRange={true} />
         <CustomRange />
         <CustomRange currentValue={true} />
-        <CustomRange showRange={true} />
       </div>
     </div>
   );
