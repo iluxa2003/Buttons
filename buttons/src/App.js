@@ -49,10 +49,7 @@ function App() {
         <CustomChecker />
         <CustomChecker disabled={true} />
       </div>
-      <div>
-        <CustomSearch />
-        <CustomSearch placeholder="Press me" leftSvg={thumbUp} />
-      </div>
+
       <div>
         <SegmentPicker
           list={list}
@@ -67,6 +64,10 @@ function App() {
         <CustomRange showRange={true} />
         <CustomRange />
         <CustomRange currentValue={true} />
+      </div>
+      <div>
+        <CustomSearch />
+        <CustomSearch placeholder="Press me" leftSvg={thumbUp} />
       </div>
     </div>
   );

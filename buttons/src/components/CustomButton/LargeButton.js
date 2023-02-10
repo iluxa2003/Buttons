@@ -1,6 +1,6 @@
 import React from "react";
 import propTypes from "prop-types";
-import  "./CustomButton.scss";
+import "./CustomButton.scss";
 const LargeButton = ({
   iconPosition = "left",
   darkTheme = false,
@@ -25,7 +25,7 @@ const LargeButton = ({
       >
         <img
           className={
-           buttonStyle +
+            buttonStyle +
             " " +
             (iconPosition === "center" ? "center" : "left-side")
           }

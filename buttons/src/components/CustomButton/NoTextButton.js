@@ -1,6 +1,6 @@
 import React from "react";
 import propTypes from "prop-types";
-import  "./CustomButton.scss";
+import "./CustomButton.scss";
 const NoTextButton = ({ icon, onClick, size = "medium" }) => {
   let buttonSize = "small";
   if (size === "medium") {

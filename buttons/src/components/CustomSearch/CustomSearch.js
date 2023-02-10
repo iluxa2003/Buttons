@@ -1,5 +1,5 @@
 import propTypes from "prop-types";
-import  "./CustomSearch.scss";
+import "./CustomSearch.scss";
 import closeButton from "../../icons/x-circle.svg";
 import searchSign from "../../icons/search.svg";
 import { React, useState } from "react";
@@ -23,7 +23,7 @@ const CustomSearch = ({
         }}
       />
       <img
-        className={"search-sign" + " " + (focus && "focused" )}
+        className={"search-sign" + " " + (focus && "focused")}
         src={leftSvg}
         alt="..."
       />
@@ -42,6 +42,5 @@ CustomSearch.propTypes = {
   placeholder: propTypes.string,
   leftSvg: propTypes.string,
   onInput: propTypes.func,
-  state: propTypes.oneOf(["unfocused", "focused"]),
 };
 export default CustomSearch;

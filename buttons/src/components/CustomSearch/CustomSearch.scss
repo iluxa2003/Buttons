@@ -18,8 +18,8 @@
   margin: 10px;
   border: 0;
   border-radius: 8px;
-  padding: 11px 103px 11px 127px;
-  width: 113px;
+  padding: 11px 98px 11px 127px;
+  width: 118px;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
@@ -29,6 +29,7 @@
 
   &-wrap {
     position: relative;
+    display: inline-block;
   }
 
   &-sign {
@@ -37,8 +38,7 @@
     top: 24px;
     width: 16px;
     height: 16px;
-    filter:
-      brightness(0) saturate(100%) invert(87%) sepia(31%) saturate(26%)
+    filter: brightness(0) saturate(100%) invert(87%) sepia(31%) saturate(26%)
       hue-rotate(315deg) brightness(87%) contrast(91%);
   }
 
@@ -54,8 +54,7 @@
     ~ .search-sign {
       position: absolute;
       left: 28px;
-      filter:
-        brightness(0) saturate(100%) invert(0%) sepia(2%) saturate(16%)
+      filter: brightness(0) saturate(100%) invert(0%) sepia(2%) saturate(16%)
         hue-rotate(5deg) brightness(102%) contrast(100%);
     }
 

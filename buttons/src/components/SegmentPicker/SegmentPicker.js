@@ -1,8 +1,8 @@
-import  "./SegmentPicker.scss";
+import "./SegmentPicker.scss";
 import SigmentPickerItem from "./SegmentPickerItem";
 import propTypes from "prop-types";
 import { React, useState } from "react";
-const SegmentPicker = ({ list, onChange, name }) => {
+const SegmentPicker = ({ list, onChange, name = Math.random() }) => {
   const [segmentPickerState, setSegmentPickerState] = useState("");
   const segmentPickerHandler = (event) => {
     setSegmentPickerState(event.target.value);

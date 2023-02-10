@@ -1,6 +1,6 @@
 import React from "react";
 import propTypes from "prop-types";
-import  "./SegmentPicker.scss";
+import "./SegmentPicker.scss";
 const SigmentPickerItem = ({ name, value, checked = false, children }) => {
   const id = Math.random();
 
@@ -25,4 +25,3 @@ SigmentPickerItem.propTypes = {
   children: propTypes.oneOfType([propTypes.string, propTypes.object]),
 };
 export default SigmentPickerItem;
-

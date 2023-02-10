@@ -7,7 +7,7 @@
 .button-icon {
   vertical-align: middle;
 
-  .left-side {
+  &.left-side {
     position: absolute;
     left: 18px;
     top: 12px;
@@ -43,8 +43,7 @@
 
     .button-icon {
       vertical-align: middle;
-      filter:
-        brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(24%)
+      filter: brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(24%)
         hue-rotate(353deg) brightness(106%) contrast(106%);
     }
   }
@@ -54,8 +53,7 @@
     background-color: ($light-Grey-Color);
 
     .button-icon {
-      filter:
-        brightness(0) saturate(100%) invert(0%) sepia(2%) saturate(16%)
+      filter: brightness(0) saturate(100%) invert(0%) sepia(2%) saturate(16%)
         hue-rotate(5deg) brightness(102%) contrast(100%);
     }
   }
@@ -67,8 +65,7 @@
     background: ($blue-Gradient-Color);
 
     .button-icon {
-      filter:
-        brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(24%)
+      filter: brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(24%)
         hue-rotate(353deg) brightness(106%) contrast(106%);
     }
 
