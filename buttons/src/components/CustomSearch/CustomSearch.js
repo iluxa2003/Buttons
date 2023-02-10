@@ -1,8 +1,8 @@
 import propTypes from "prop-types";
-import styles from "./CustomSearch.module.scss";
-import close_button from "../../icons/x-circle.svg";
+import  "./CustomSearch.scss";
+import closeButton from "../../icons/x-circle.svg";
 import searchSign from "../../icons/search.svg";
-import { useState } from "react";
+import { React, useState } from "react";
 const CustomSearch = ({
   placeholder = "Search products",
   leftSvg = searchSign,
@@ -10,9 +10,9 @@ const CustomSearch = ({
 }) => {
   const [focus, setfocus] = useState(false);
   return (
-    <div className={styles.search_wrap}>
+    <div className={"search-wrap"}>
       <input
-        className={styles.search + " " + (focus && styles.focused)}
+        className={"search" + " " + (focus && "focused")}
         placeholder={placeholder}
         onInput={onInput}
         onFocus={() => {
@@ -23,17 +23,17 @@ const CustomSearch = ({
         }}
       />
       <img
-        className={styles.search_sign + " " + (focus ? styles.focused : "")}
+        className={"search-sign" + " " + (focus && "focused" )}
         src={leftSvg}
         alt="..."
       />
       <button
-        className={styles.close_button + " " + (focus ? styles.focused : "")}
+        className={"close-button" + " " + (focus && "focused")}
         onClick={() => {
           setfocus(false);
         }}
       >
-        <img src={close_button} className={styles.icon} alt="..." />
+        <img src={closeButton} className={"icon"} alt="..." />
       </button>
     </div>
   );

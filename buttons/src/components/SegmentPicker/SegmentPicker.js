@@ -1,7 +1,7 @@
-import styles from "./SegmentPicker.module.scss";
+import  "./SegmentPicker.scss";
 import SigmentPickerItem from "./SegmentPickerItem";
 import propTypes from "prop-types";
-import { useState } from "react";
+import { React, useState } from "react";
 const SegmentPicker = ({ list, onChange, name }) => {
   const [segmentPickerState, setSegmentPickerState] = useState("");
   const segmentPickerHandler = (event) => {
@@ -11,7 +11,7 @@ const SegmentPicker = ({ list, onChange, name }) => {
     } catch {}
   };
   return (
-    <div className={styles.segment_picker} onChange={segmentPickerHandler}>
+    <div className={"segment-picker"} onChange={segmentPickerHandler}>
       {list.map((item) => {
         return (
           <SigmentPickerItem

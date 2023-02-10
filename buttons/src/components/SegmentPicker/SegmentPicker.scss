@@ -1,0 +1,43 @@
+@import "../../styleVariables";
+
+.segment-picker {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  border: 0;
+  border-radius: 8px;
+  padding: 4px;
+  width: fit-content;
+  height: 36px;
+  background-color: ($light-Grey-Color);
+
+  label {
+    border-radius: 4px;
+    padding: 8px 63px;
+    font-family: sans-serif, Arial;
+    font-size: 16px;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+  }
+
+  input[type="radio"] {
+    display: none;
+
+    &:checked + label {
+      border-radius: 4px;
+      box-shadow: (
+        0 4px 8px rgb(0 0 0 / 4%),
+        0 0 2px rgb(0 0 0 / 6%),
+        0 0 1px rgb(0 0 0 / 4%)
+      );
+      background: ($white-Color);
+    }
+
+    &:checked:disabled + label {
+      background: ($light-Grey-Color);
+    }
+  }
+}

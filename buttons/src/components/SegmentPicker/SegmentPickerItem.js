@@ -1,10 +1,11 @@
+import React from "react";
 import propTypes from "prop-types";
-import styles from "./SegmentPicker.module.scss";
+import  "./SegmentPicker.scss";
 const SigmentPickerItem = ({ name, value, checked = false, children }) => {
   const id = Math.random();
 
   return (
-    <div className={styles.segment_picker_item} key={Math.random()}>
+    <div className={"segment-picker-item"} key={Math.random()}>
       <input
         type="radio"
         id={id}
@@ -19,6 +20,9 @@ const SigmentPickerItem = ({ name, value, checked = false, children }) => {
 };
 SigmentPickerItem.propTypes = {
   name: propTypes.string,
+  value: propTypes.string,
   checked: propTypes.bool,
+  children: propTypes.oneOfType([propTypes.string, propTypes.object]),
 };
 export default SigmentPickerItem;
+

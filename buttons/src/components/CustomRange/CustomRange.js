@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { React, useState } from "react";
 import propTypes from "prop-types";
-import styles from "./CustomRange.module.scss";
+import "./CustomRange.scss";
 const CustomRange = ({
   min = 0,
   max = 100,
@@ -17,11 +17,11 @@ const CustomRange = ({
     } catch {}
   };
   return (
-    <div className={styles.range_wrap}>
-      <div className={styles.range}>
+    <div className={"range-wrap"}>
+      <div className={"range"}>
         <input
           type="range"
-          className={styles.range_input}
+          className={"range-input"}
           value={range}
           onInput={customRangeHandler}
           min={min}
@@ -31,7 +31,7 @@ const CustomRange = ({
 
         {currentValue && (
           <span
-            className={styles.range_current_number}
+            className={"range-current-number"}
             style={{ left: 4 + range * 0.85 + "%" }}
           >
             {range}
@@ -40,7 +40,7 @@ const CustomRange = ({
       </div>
 
       {showRange && (
-        <div className={styles.range_info}>
+        <div className={"range-info"}>
           <div>{min}</div>
           <div>{max}</div>
         </div>

@@ -7,8 +7,8 @@ import telegram from "./icons/telegram.svg";
 import CustomChecker from "./components/CustomChecker/CustomChecker";
 import CustomSearch from "./components/CustomSearch/CustomSearch";
 import SegmentPicker from "./components/SegmentPicker/SegmentPicker";
-import { useState } from "react";
-import CustomRange from "./components/CustomRange.js/CustomRange";
+import { React, useState } from "react";
+import CustomRange from "./components/CustomRange/CustomRange";
 
 function App() {
   const [segmentState, setSegmentState] = useState("");
@@ -31,7 +31,7 @@ function App() {
     },
   ];
   return (
-    <div className="App">
+    <div className="app">
       <div>
         <LargeButton darkTheme={true}>Telegram</LargeButton>
         <LargeButton darkTheme={true} icon={telegram}>

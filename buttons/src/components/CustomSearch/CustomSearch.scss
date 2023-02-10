@@ -1,0 +1,66 @@
+@import "../../styleVariables";
+
+.close-button {
+  position: absolute;
+  right: 22px;
+  top: 22px;
+  display: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+
+  img {
+    vertical-align: middle;
+  }
+}
+
+.search {
+  margin: 10px;
+  border: 0;
+  border-radius: 8px;
+  padding: 11px 103px 11px 127px;
+  width: 113px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.15px;
+  background: ($light-Grey-Color);
+
+  &-wrap {
+    position: relative;
+  }
+
+  &-sign {
+    position: absolute;
+    left: 113px;
+    top: 24px;
+    width: 16px;
+    height: 16px;
+    filter:
+      brightness(0) saturate(100%) invert(87%) sepia(31%) saturate(26%)
+      hue-rotate(315deg) brightness(87%) contrast(91%);
+  }
+
+  &.focused {
+    outline: none;
+    padding: 11px 40px;
+    width: 263px;
+
+    &::placeholder {
+      color: ($black-Color);
+    }
+
+    ~ .search-sign {
+      position: absolute;
+      left: 28px;
+      filter:
+        brightness(0) saturate(100%) invert(0%) sepia(2%) saturate(16%)
+        hue-rotate(5deg) brightness(102%) contrast(100%);
+    }
+
+    ~ .close-button {
+      display: block;
+    }
+  }
+}

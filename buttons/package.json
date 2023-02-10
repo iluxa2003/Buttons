@@ -15,6 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "runFix": "npx stylelint \"**/*.scss\" --fix",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -23,6 +24,9 @@
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "plugins": [
+      "stylelint-order"
     ]
   },
   "browserslist": {
@@ -36,5 +40,23 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^8.33.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2",
+    "prettier-stylelint": "^0.4.2",
+    "stylelint": "^14.16.1",
+    "stylelint-config-css-modules": "^4.2.0",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-standard-scss": "^6.1.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.6.0",
+    "stylelint-order": "^6.0.1",
+    "stylelint-scss": "^4.3.0"
   }
 }

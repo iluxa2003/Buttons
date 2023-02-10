@@ -1,10 +1,11 @@
-import styles from "./CustomChecker.module.scss";
+import React from "react";
+import "./CustomChecker.scss";
 import propTypes from "prop-types";
 const CustomChecker = ({ disabled = false, onChange }) => {
   return (
     <div>
       <input
-        className={styles.checker}
+        className={"checker"}
         type="checkbox"
         disabled={disabled}
         onChange={onChange}

@@ -1,0 +1,83 @@
+@import "../../styleVariables";
+
+.no-icon {
+  display: none;
+}
+
+.button-icon {
+  vertical-align: middle;
+
+  .left-side {
+    position: absolute;
+    left: 18px;
+    top: 12px;
+    vertical-align: middle;
+  }
+
+  &.center {
+    display: content;
+    width: 20px;
+    height: 20px;
+
+    ~ .button-text {
+      font-weight: 400;
+      font-size: 11px;
+      letter-spacing: 0.4px;
+    }
+  }
+}
+
+.button {
+  position: relative;
+  margin: 10px;
+  border: none;
+  border-radius: 14px;
+  min-width: 47px;
+  font-weight: 600;
+  cursor: pointer;
+
+  &.small {
+    border-radius: 50%;
+    padding: 16px;
+    background-color: ($light-Blue-Color);
+
+    .button-icon {
+      vertical-align: middle;
+      filter:
+        brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(24%)
+        hue-rotate(353deg) brightness(106%) contrast(106%);
+    }
+  }
+
+  &.medium {
+    padding: 16px 32px;
+    background-color: ($light-Grey-Color);
+
+    .button-icon {
+      filter:
+        brightness(0) saturate(100%) invert(0%) sepia(2%) saturate(16%)
+        hue-rotate(5deg) brightness(102%) contrast(100%);
+    }
+  }
+
+  &.large {
+    padding: 16px 130px;
+    min-width: 343px;
+    color: ($white-Color);
+    background: ($blue-Gradient-Color);
+
+    .button-icon {
+      filter:
+        brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(24%)
+        hue-rotate(353deg) brightness(106%) contrast(106%);
+    }
+
+    &.dark {
+      background: ($black-Color);
+    }
+  }
+}
+
+.button-icon.center ~ .button {
+  padding: 8px 130px;
+}

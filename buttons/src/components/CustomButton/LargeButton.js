@@ -1,5 +1,6 @@
+import React from "react";
 import propTypes from "prop-types";
-import styles from "./CustomButton.module.scss";
+import  "./CustomButton.scss";
 const LargeButton = ({
   iconPosition = "left",
   darkTheme = false,
@@ -7,31 +8,31 @@ const LargeButton = ({
   onClick,
   children,
 }) => {
-  let buttonStyle = styles.button_icon;
+  let buttonStyle = "button-icon";
   let theme = "";
   if (darkTheme) {
-    theme = styles.dark;
+    theme = "dark";
   }
   if (icon === undefined) {
-    buttonStyle = styles.no_icon;
+    buttonStyle = "no-icon";
   }
 
   return (
     <div>
       <button
-        className={styles.button + " " + styles.large + " " + theme}
+        className={"button" + " " + "large" + " " + theme}
         onClick={onClick}
       >
         <img
           className={
-            buttonStyle +
+           buttonStyle +
             " " +
-            (iconPosition === "center" ? styles.center : styles.left_side)
+            (iconPosition === "center" ? "center" : "left-side")
           }
           src={icon}
           alt="..."
         />
-        <div className={styles.button_text}>{children}</div>
+        <div className={"button-text"}>{children}</div>
       </button>
     </div>
   );
@@ -42,6 +43,7 @@ LargeButton.propTypes = {
   onClick: propTypes.func,
   label: propTypes.string,
   darkTheme: propTypes.bool,
+  children: propTypes.oneOfType([propTypes.string, propTypes.object]),
   iconPosition: propTypes.oneOf(["left", "center"]),
 };
 

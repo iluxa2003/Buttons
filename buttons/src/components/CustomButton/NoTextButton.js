@@ -1,15 +1,16 @@
+import React from "react";
 import propTypes from "prop-types";
-import styles from "./CustomButton.module.scss";
+import  "./CustomButton.scss";
 const NoTextButton = ({ icon, onClick, size = "medium" }) => {
-  let buttonSize = styles.small;
+  let buttonSize = "small";
   if (size === "medium") {
-    buttonSize = styles.medium;
+    buttonSize = "medium";
   }
 
   return (
     <div>
-      <button className={styles.button + " " + buttonSize} onClick={onClick}>
-        <img className={styles.button_icon} src={icon} alt="..." />
+      <button className={"button" + " " + buttonSize} onClick={onClick}>
+        <img className={"button-icon"} src={icon} alt="..." />
       </button>
     </div>
   );
