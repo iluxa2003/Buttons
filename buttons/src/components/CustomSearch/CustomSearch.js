@@ -10,9 +10,9 @@ const CustomSearch = ({
 }) => {
   const [focus, setfocus] = useState(false);
   return (
-    <div className={"search-wrap"}>
+    <div className="search-wrap">
       <input
-        className={"search" + " " + (focus && "focused")}
+        className={"search " + (focus && "focused")}
         placeholder={placeholder}
         onInput={onInput}
         onFocus={() => {
@@ -23,17 +23,17 @@ const CustomSearch = ({
         }}
       />
       <img
-        className={"search-sign" + " " + (focus && "focused")}
+        className={"search-sign " + (focus && "focused")}
         src={leftSvg}
-        alt="..."
+        alt="Error"
       />
       <button
-        className={"close-button" + " " + (focus && "focused")}
+        className={"close-button " + (focus && "focused")}
         onClick={() => {
           setfocus(false);
         }}
       >
-        <img src={closeButton} className={"icon"} alt="..." />
+        <img src={closeButton} className="icon" alt="Error" />
       </button>
     </div>
   );

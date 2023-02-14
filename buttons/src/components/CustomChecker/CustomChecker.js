@@ -5,7 +5,7 @@ const CustomChecker = ({ disabled = false, onChange }) => {
   return (
     <div>
       <input
-        className={"checker"}
+        className="checker"
         type="checkbox"
         disabled={disabled}
         onChange={onChange}

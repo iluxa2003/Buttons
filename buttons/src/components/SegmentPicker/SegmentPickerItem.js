@@ -3,9 +3,8 @@ import propTypes from "prop-types";
 import "./SegmentPicker.scss";
 const SigmentPickerItem = ({ name, value, checked = false, children }) => {
   const id = Math.random();
-
   return (
-    <div className={"segment-picker-item"} key={Math.random()}>
+    <div className="segment-picker-item" key={Math.random()}>
       <input
         type="radio"
         id={id}
