@@ -17,11 +17,11 @@ const CustomRange = ({
     } catch {}
   };
   return (
-    <div className={"range-wrap"}>
-      <div className={"range"}>
+    <div className="range-wrap">
+      <div className="range">
         <input
           type="range"
-          className={"range-input"}
+          className="range-input"
           value={range}
           onInput={customRangeHandler}
           min={min}
@@ -31,7 +31,7 @@ const CustomRange = ({
 
         {currentValue && (
           <span
-            className={"range-current-number"}
+            className="range-current-number"
             style={{ left: 4 + range * 0.85 + "%" }}
           >
             {range}
@@ -40,7 +40,7 @@ const CustomRange = ({
       </div>
 
       {showRange && (
-        <div className={"range-info"}>
+        <div className="range-info">
           <div>{min}</div>
           <div>{max}</div>
         </div>

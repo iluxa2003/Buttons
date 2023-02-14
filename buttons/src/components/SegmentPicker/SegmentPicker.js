@@ -11,7 +11,7 @@ const SegmentPicker = ({ list, onChange, name = Math.random() }) => {
     } catch {}
   };
   return (
-    <div className={"segment-picker"} onChange={segmentPickerHandler}>
+    <div className="segment-picker" onChange={segmentPickerHandler}>
       {list.map((item) => {
         return (
           <SigmentPickerItem

@@ -8,31 +8,21 @@ const LargeButton = ({
   onClick,
   children,
 }) => {
-  let buttonStyle = "button-icon";
-  let theme = "";
-  if (darkTheme) {
-    theme = "dark";
-  }
-  if (icon === undefined) {
-    buttonStyle = "no-icon";
-  }
-
   return (
     <div>
       <button
-        className={"button" + " " + "large" + " " + theme}
+        className={"button large " + (darkTheme && "dark")}
         onClick={onClick}
       >
         <img
           className={
-            buttonStyle +
-            " " +
-            (iconPosition === "center" ? "center" : "left-side")
+            (icon ? "button-icon" : "no-icon") +
+            (iconPosition === "center" ? " center" : " left-side")
           }
           src={icon}
-          alt="..."
+          alt="Something went wrong"
         />
-        <div className={"button-text"}>{children}</div>
+        <div className="button-text">{children}</div>
       </button>
     </div>
   );
