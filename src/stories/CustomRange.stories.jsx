@@ -1,12 +1,14 @@
 import React from "react";
-import CustomRange from "../components/CustomRange/CustomRange.js";
+import CustomRange from "../components/CustomRange/CustomRange";
 
 export default {
   title: "CustomRange",
   component: CustomRange,
 };
 
-const Template = (args) => <CustomRange {...args} />;
+function Template(args) {
+  return <CustomRange {...args} />;
+}
 
 export const Range = Template.bind({});
 Range.args = {};

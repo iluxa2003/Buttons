@@ -1,7 +1,8 @@
 import React from "react";
 import "./CustomChecker.scss";
 import propTypes from "prop-types";
-const CustomChecker = ({ disabled = false, onChange }) => {
+
+function CustomChecker({ disabled, onChange }) {
   return (
     <div>
       <input
@@ -12,9 +13,15 @@ const CustomChecker = ({ disabled = false, onChange }) => {
       />
     </div>
   );
-};
+}
+
 CustomChecker.propTypes = {
   disabled: propTypes.bool,
   onChange: propTypes.func,
+};
+
+CustomChecker.defaultProps = {
+  disabled: false,
+  onChange: () => { },
 };
 export default CustomChecker;

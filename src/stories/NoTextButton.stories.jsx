@@ -14,7 +14,9 @@ export default {
   },
 };
 
-const Template = (args) => <NoTextButton {...args} />;
+function Template(args) {
+  return <NoTextButton {...args} />;
+}
 export const SmallBlueButton = Template.bind({});
 SmallBlueButton.args = {
   icon: plus,

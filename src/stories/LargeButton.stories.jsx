@@ -1,5 +1,5 @@
 import React from "react";
-import LargeButton from "../components/CustomButton/LargeButton.js";
+import LargeButton from "../components/CustomButton/LargeButton";
 import telegram from "../icons/telegram.svg";
 import buttonIcons from "../icons/button-icons";
 
@@ -14,7 +14,9 @@ export default {
   },
 };
 
-const Template = (args) => <LargeButton {...args} />;
+function Template(args) {
+  return <LargeButton {...args} />;
+}
 
 export const LargeBlueButtonNoIcon = Template.bind({});
 LargeBlueButtonNoIcon.args = {

@@ -1,3 +1,4 @@
+import { React, useState } from "react";
 import "./App.scss";
 import LargeButton from "./components/CustomButton/LargeButton";
 import NoTextButton from "./components/CustomButton/NoTextButton";
@@ -7,7 +8,6 @@ import telegram from "./icons/telegram.svg";
 import CustomChecker from "./components/CustomChecker/CustomChecker";
 import CustomSearch from "./components/CustomSearch/CustomSearch";
 import SegmentPicker from "./components/SegmentPicker/SegmentPicker";
-import { React, useState } from "react";
 import CustomRange from "./components/CustomRange/CustomRange";
 
 function App() {
@@ -33,8 +33,8 @@ function App() {
   return (
     <div className="app">
       <div>
-        <LargeButton darkTheme={true}>Telegram</LargeButton>
-        <LargeButton darkTheme={true} icon={telegram}>
+        <LargeButton darkTheme>Telegram</LargeButton>
+        <LargeButton darkTheme icon={telegram}>
           Telegram
         </LargeButton>
         <LargeButton>Telegram</LargeButton>
@@ -47,13 +47,13 @@ function App() {
       </div>
       <div>
         <CustomChecker />
-        <CustomChecker disabled={true} />
+        <CustomChecker disabled />
       </div>
 
       <div>
         <SegmentPicker
           list={list}
-          name={"itemsList"}
+          name="itemsList"
           onChange={(event) => {
             setSegmentState(event.target.value);
           }}
@@ -61,9 +61,9 @@ function App() {
         <div>{segmentState}</div>
       </div>
       <div>
-        <CustomRange showRange={true} />
+        <CustomRange showRange />
         <CustomRange />
-        <CustomRange currentValue={true} />
+        <CustomRange currentValue />
       </div>
       <div>
         <CustomSearch />

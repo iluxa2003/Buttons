@@ -1,7 +1,10 @@
 import React from "react";
 import propTypes from "prop-types";
 import "./SegmentPicker.scss";
-const SigmentPickerItem = ({ name, value, checked = false, children }) => {
+
+function SigmentPickerItem({
+  name, value, checked, children,
+}) {
   const id = Math.random();
   return (
     <div className="segment-picker-item" key={Math.random()}>
@@ -16,11 +19,19 @@ const SigmentPickerItem = ({ name, value, checked = false, children }) => {
       <label htmlFor={id}>{children}</label>
     </div>
   );
-};
+}
 SigmentPickerItem.propTypes = {
   name: propTypes.string,
   value: propTypes.string,
   checked: propTypes.bool,
   children: propTypes.oneOfType([propTypes.string, propTypes.object]),
 };
+
+SigmentPickerItem.defaultProps = {
+  name: "",
+  value: "",
+  checked: false,
+  children: "",
+};
+
 export default SigmentPickerItem;
