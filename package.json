@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "runFix": "npx stylelint \"**/*.scss\" --fix",
+    "runFix": "npx stylelint \"**/*.scss\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
