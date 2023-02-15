@@ -1,23 +1,25 @@
 import React from "react";
 import propTypes from "prop-types";
 import "./CustomButton.scss";
-const LargeButton = ({
-  iconPosition = "left",
-  darkTheme = false,
+
+function LargeButton({
+  iconPosition,
+  darkTheme,
   icon,
   onClick,
   children,
-}) => {
+}) {
   return (
     <div>
       <button
-        className={"button large " + (darkTheme && "dark")}
+        type="button"
+        className={`button large ${darkTheme && "dark"}`}
         onClick={onClick}
       >
         <img
           className={
-            (icon ? "button-icon" : "no-icon") +
-            (iconPosition === "center" ? " center" : " left-side")
+            (icon ? "button-icon" : "no-icon")
+            + (iconPosition === "center" ? " center" : " left-side")
           }
           src={icon}
           alt="Something went wrong"
@@ -26,15 +28,21 @@ const LargeButton = ({
       </button>
     </div>
   );
-};
+}
 
 LargeButton.propTypes = {
   icon: propTypes.string,
   onClick: propTypes.func,
-  label: propTypes.string,
   darkTheme: propTypes.bool,
   children: propTypes.oneOfType([propTypes.string, propTypes.object]),
   iconPosition: propTypes.oneOf(["left", "center"]),
 };
 
+LargeButton.defaultProps = {
+  icon: "",
+  onClick: () => { },
+  darkTheme: false,
+  children: "",
+  iconPosition: "left",
+};
 export default LargeButton;

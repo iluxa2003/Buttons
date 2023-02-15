@@ -6,7 +6,9 @@ export default {
   component: CustomChecker,
 };
 
-const Template = (args) => <CustomChecker {...args} />;
+function Template(args) {
+  return <CustomChecker {...args} />;
+}
 
 export const DefaultChecker = Template.bind({});
 DefaultChecker.args = {};

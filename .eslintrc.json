@@ -6,7 +6,8 @@
     "extends": [
         "plugin:react/recommended",
         "standard",
-        "prettier"
+        "prettier",
+        "airbnb"
     ],
     "overrides": [
     ],
@@ -18,6 +19,9 @@
         "react"
     ],
     "rules": {
-        "quotes":"off"
+        "quotes":"off",
+        "linebreak-style":"off",
+        "react/jsx-props-no-spreading":"off",
+        "react/forbid-prop-types":"off"
     }
 }

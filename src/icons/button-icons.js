@@ -7,6 +7,7 @@ import umbrella from "./button-icons/umbrella.svg";
 import underline from "./button-icons/underline.svg";
 import unlock from "./button-icons/unlock.svg";
 import upload from "./button-icons/upload.svg";
+
 const buttonIcons = {
   triangle,
   truck,

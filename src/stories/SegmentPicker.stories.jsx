@@ -25,7 +25,9 @@ export default {
   component: SegmentPicker,
 };
 
-const Template = (args) => <SegmentPicker {...args} />;
+function Template(args) {
+  return <SegmentPicker {...args} />;
+}
 export const Picker = Template.bind({});
 Picker.args = {
   list: items,

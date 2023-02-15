@@ -13,7 +13,9 @@ export default {
   },
 };
 
-const Template = (args) => <CustomSearch {...args} />;
+function Template(args) {
+  return <CustomSearch {...args} />;
+}
 
 export const DefaultSearch = Template.bind({});
 DefaultSearch.args = {};

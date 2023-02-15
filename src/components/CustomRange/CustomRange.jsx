@@ -1,14 +1,15 @@
 import { React, useState } from "react";
 import propTypes from "prop-types";
 import "./CustomRange.scss";
-const CustomRange = ({
-  min = 0,
-  max = 100,
-  step = 1,
-  showRange = false,
-  currentValue = false,
+
+function CustomRange({
+  min,
+  max,
+  step,
+  showRange,
+  currentValue,
   onInput,
-}) => {
+}) {
   const [range, setRange] = useState(0);
   const customRangeHandler = (event) => {
     setRange(event.target.value);
@@ -32,7 +33,7 @@ const CustomRange = ({
         {currentValue && (
           <span
             className="range-current-number"
-            style={{ left: 4 + range * 0.85 + "%" }}
+            style={{ left: `${4 + range * 0.85}%` }}
           >
             {range}
           </span>
@@ -47,7 +48,7 @@ const CustomRange = ({
       )}
     </div>
   );
-};
+}
 
 CustomRange.propTypes = {
   min: propTypes.number,
@@ -56,5 +57,14 @@ CustomRange.propTypes = {
   currentValue: propTypes.bool,
   showRange: propTypes.bool,
   onInput: propTypes.func,
+};
+
+CustomRange.defaultProps = {
+  min: 0,
+  max: 100,
+  step: 1,
+  currentValue: false,
+  showRange: false,
+  onInput: () => { },
 };
 export default CustomRange;
